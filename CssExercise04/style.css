@@ -1,0 +1,125 @@
+div{
+    border: black solid 10px;
+    position: absolute;
+    display: inline-block;
+    margin: 0px;
+}
+
+.white{
+    background-color: white;
+}
+
+.n01{
+    top: 0px;
+    left: 0px;
+    height: 250px;
+    width: 40px;
+}
+
+.n02{
+    top: 0px;
+    left: 50px;
+    height: 250px;
+    width: 200px;
+}
+
+.n03{
+    top: 0px;
+    left: 260px;
+    height: 40px;
+    width: 50px;
+}
+
+.n04{
+    top: 0px;
+    left: 320px;
+    height: 40px;
+    width: 200px;
+}
+
+.yellow{
+    background-color: yellow;
+    top: 0px;
+    left: 530px;
+    height: 40px;
+    width: 150px;
+}
+
+.n05{
+    top: 50px;
+    left: 260px;
+    height: 200px;
+    width: 50px;
+}
+
+.red{
+    background-color: red;
+    top: 50px;
+    left: 320px;
+    height: 200px;
+    width: 200px;
+}
+
+.n06{
+    top: 50px;
+    left: 530px;
+    height: 200px;
+    width: 150px;
+}
+
+.n07{
+    top: 260px;
+    left: 0px;
+    height: 80px;
+    width: 40px;
+}
+
+.blue{
+    background-color: blue;
+    top: 260px;
+    left: 50px;
+    height: 80px;
+    width: 200px;
+}
+
+.n08{
+    top: 260px;
+    left: 260px;
+    height: 80px;
+    width: 50px;
+}
+
+.n09{
+    top: 260px;
+    left: 320px;
+    height: 120px;
+    width: 200px;
+}
+
+.n10{
+    top: 260px;
+    left: 530px;
+    height: 120px;
+    width: 150px;
+}
+
+.n11{
+    top: 350px;
+    left: 0px;
+    height: 30px;
+    width: 40px;
+}
+
+.n12{
+    top: 350px;
+    left: 50px;
+    height: 30px;
+    width: 200px;
+}
+
+.n13{
+    top: 350px;
+    left: 260px;
+    height: 30px;
+    width: 50px;
+}
