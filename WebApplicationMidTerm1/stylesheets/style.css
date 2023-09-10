@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+body{
+    background-color: #ecf2f8;
+}
+
+h1, h2, p{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.container{
+    width: 1124px;
+    height: 584px;
+    padding: 158px;/*La suma de ambos da un width de 1440px x 900px*/
+    background-color: #ecf2f8;
+    margin: 0 auto;
+}
+
+.container-testimonies{
+    display: flex;
+    width: 1124px;
+    height: 584px;
+    margin: 0 auto;
+}
+
+.right-side{
+    width: 840px;
+}
+
+.testimony{
+    height: 200px;
+    display: inline-block;
+    position: relative;
+    padding: 28px;
+    border-radius: 0.5rem;
+    margin: 16px;
+    vertical-align: top;
+    box-shadow: 5px 5px 20px rgba(206, 206, 206, 0.5); 
+}
+
+.daniel{
+    background-color: #7541c8;
+    width: 465px;
+    color: #ecf2f8;
+}
+
+.daniel p{
+    color: #cfcfcf;
+}
+
+.jonathan{
+    background-color: #48556a;
+    width: 195px;
+    color: #ecf2f8;
+}
+
+.jonathan p{
+    color: #cfcfcf;
+}
+
+
+.jeanette{
+    background-color: white;
+    width: 195px;
+    color: #48556a;
+}
+
+.jeanette p{
+    color: #999999;
+}
+
+.patrick{
+    background-color: #19212e;
+    width: 465px;
+    color: #ecf2f8;
+}
+
+.patrick p{
+    color: #cfcfcf;
+}
+
+.kira{
+    height: 488px;
+    background-color: white;
+    width: 195px;
+    color: #48556a;
+}
+
+.kira p{
+    color: #999999;
+}
+
+.profile{
+    display: flex;
+    position: relative;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0; 
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+    height: 190px;
+}
+
+.kira .message {
+    height: 470px;
+}
+
+.profile-picture{
+    width: 33px;
+    height: 33px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.quotations{
+    position: absolute;
+    top: 0;
+    right: 70px;
+    z-index: 0;
+}
