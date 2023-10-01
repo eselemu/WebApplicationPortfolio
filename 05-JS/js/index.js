@@ -1,5 +1,4 @@
 document.querySelector("h1").addEventListener("click",() => {
-    alert('Pepe es mi hijo y un pendejo');
     //document.getElementsByTagName("p")[0].innerHTML = "U are an idiot";
     var oopsArray = document.getElementsByClassName("oops");
     oopsArray[0].innerHTML = "HOla";
@@ -17,4 +16,16 @@ document.querySelector("h1").addEventListener("click",() => {
     }
 
     document.querySelector("a").setAttribute("href", "https://paletadecolores.online/colors/ffe59a/");
+    $("li").css("color", "red");
+    if($(".s_item").hasClass("super")){
+        $(".s_item").removeClass("super");
+    }
+    else{
+        $(".s_item").addClass("super");
+    }
+
+    //$("p").text($("p").text() + "hola");
+    $(".nums").prepend("<li>Element "+ ($(".nums li").length + 1) +"</li>");
+
+    $("p").before("<h3>Sub</h3>")
 });

@@ -51,7 +51,7 @@ h3{
 
 hr {
     border: none;
-    border-top: 6px dotted #EAF6F6;
+    border-top: 6px dotted black;
     width: 4%;
     margin-left: 100px;
     margin-right: 100px;
@@ -124,22 +124,22 @@ img{
 }
 
 .graded04{
-    background-color: var(--graded05);
+    background-color: var(--graded04);
     color: white;
 }
 
 .graded03{
-    background-color: var(--graded05);
+    background-color: var(--graded03);
     color: white;
 }
 
 .graded02{
-    background-color: var(--graded05);
+    background-color: var(--graded02);
     color: white;
 }
 
 .graded01{
-    background-color: var(--graded05);
+    background-color: var(--graded01);
     color: white;
 }
 
