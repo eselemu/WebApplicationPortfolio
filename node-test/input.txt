@@ -1,0 +1,2 @@
+Hello world
+this is a file that will showcase the use of the fs module
