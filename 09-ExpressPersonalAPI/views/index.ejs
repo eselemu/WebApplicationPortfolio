@@ -1,0 +1,30 @@
+<%- include("partials/header"); %>
+<div class="container">
+    <br/>
+    <form action="/greet" method="get">
+        Register:
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <input type="submit" class="btn btn-primary" value="Go next">
+    </form>
+</div>
+<% names.forEach((name)=>{ %>
+    <div class="container containerVisual">
+        <div class="row">
+            <div class="col-9">
+                <h2>Hello <%= name %>!</h2>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <a href="/wazzup?name=<%= name %>">Go to wazzup</a>
+            </div>
+        </div>
+    </div>
+<% });%>
+<div class="container">
+    <br/>
+    <form action="/task" method="post">
+        Add task:
+        <input type="text" name="task" id="task" placeholder="Task" required>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+</div>
+<%- include("partials/footer"); %>

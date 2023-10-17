@@ -1,0 +1,22 @@
+<%- include("partials/header"); %>
+    <div class="container">
+        <br/>
+        <form action="/login">
+            <div class="mb-3">
+                <label for="name" class="form-label">Username</label>
+                <input type="text" class="form-control" name="name" id="name" aria-describedby="name" required>
+            </div>
+            <button type="submit" class="btn btn-primary" formmethod="post">Login POST</button>
+            <button type="submit" class="btn btn-primary" formmethod="get">Login GET</button>
+        </form>
+        <br/>
+        <form action="/home" method="get">
+            <button type="submit" class="btn btn-primary">Blog</button>
+        </form>
+    </div>
+    <% if (alertMessage != "") { %>
+        <script>
+            alert("<%= alertMessage %>");
+        </script>
+    <% } %>
+<%- include("partials/footer"); %>

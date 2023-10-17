@@ -1,0 +1,33 @@
+<%- include("partials/header"); %>
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/imgs/blog.png" alt="" width="72" height="72">
+    <h1 class="display-5 fw-bold text-body-emphasis">Blog</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Welcome <%= name %>! on this page, you can post and read other users' posts.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <form method="get">
+                <button type="submit" class="btn btn-outline-secondary btn-lg px-4"
+                    fdprocessedid="ceugqa" formaction="/">Home</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("partials/createPost"); %>
+<% posts.forEach((post)=>{ %>
+    <div class="container containerVisual">
+        <div class="row">
+            <div class="col-9">
+                <h2><%= post.title %></h2>
+                <h6><i><%= post.name %></i></h6>
+                <p><%= post.content %></p>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <form method="post" action="/post">
+                    <input type="hidden" name="id" value="<%= post.id %>">
+                    <input type="submit" class="btn btn-primary" value="Read more">
+                </form>
+            </div>
+        </div>
+    </div>
+<% });%>
+<%- include("partials/footer"); %>

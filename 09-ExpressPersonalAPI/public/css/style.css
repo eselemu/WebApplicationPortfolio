@@ -1,0 +1,8 @@
+.containerVisual{
+    background-color: #f0f8ff;
+    padding: 1%;
+    max-width: 75rem;
+    margin: 1rem auto;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
