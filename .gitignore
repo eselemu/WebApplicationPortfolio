@@ -3,6 +3,7 @@
 /08-BasicExpress/node_modules
 /09-ExpressPersonalAPI/node_modules
 /10-ExpressEJS/node_modules
+/express-test/node_modules
 
 # Logs
 logs
