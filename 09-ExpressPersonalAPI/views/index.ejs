@@ -27,4 +27,22 @@
         <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 </div>
+<h1>TODO list</h1>
+<%  var index = 0;
+    tasks.forEach((task)=>{ %>
+    <div class="container containerVisual">
+        <div class="row">
+            <div class="col-9">
+                <h3>Hello <%= task %>!</h3>
+            </div>
+            <div class="col-3 d-flex justify-content-end">
+                <form method="delete" action="/task">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <input type="submit" class="btn btn-primary" formmethod="DELETE" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+<% index += 1;
+});%>
 <%- include("partials/footer"); %>
