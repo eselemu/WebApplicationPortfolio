@@ -56,6 +56,41 @@ app.route("/task")
     res.redirect("/");
 });
 
+app.route("/up")
+.get((req, res) =>{
+    var index = parseInt(req.query.index);
+    if (index == 0) {
+        // Swap the first element with the last one
+        var firstElement = tasks[0];
+        tasks[0] = tasks[tasks.length - 1];
+        tasks[tasks.length - 1] = firstElement;
+    } else if (index > 0 && index < tasks.length) {
+        // Swap the element at index with the element at index-1
+        var temp = tasks[index];
+        tasks[index] = tasks[index - 1];
+        tasks[index - 1] = temp;
+    }
+    res.redirect("/");
+});
+
+app.route("/down")
+.get((req, res) =>{
+    var index = parseInt(req.query.index);
+
+    if (index === tasks.length - 1) {
+        console.log("Swapping first and last elements");
+        var firstElement = tasks[0];
+        tasks[0] = tasks[tasks.length - 1];
+        tasks[tasks.length - 1] = firstElement;
+    } else {
+        console.log("Swapping element at index", index, "with element at index", index + 1);
+        var temp = tasks[index];
+        tasks[index] = tasks[index + 1];
+        tasks[index + 1] = temp;
+    } 
+    res.redirect("/");
+});
+
 app.use((err, req, res, next)=>{
     console.error(err.stack);
     res.status(500).send("There was an error in the app");
