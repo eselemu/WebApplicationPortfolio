@@ -1,0 +1,21 @@
+<%- include("partials/header"); %>
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <p><%= cityName %></p>
+        </div>
+        <div class="col-3">
+            <p><%= temperature %> celsius</p>
+        </div>
+        <div class="col-4">
+            <p><%= description %></p>
+        </div>
+        <div class="col-2">
+            <img src="<%= image %>" alt="weather description"/>
+        </div>
+        <div class="col-12">
+            <a href="/">Home</a>
+        </div>
+    </div>
+</div>
+<%- include("partials/footer"); %>

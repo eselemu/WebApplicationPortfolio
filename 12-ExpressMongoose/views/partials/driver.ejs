@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <input type="text" name="num" id="num" value="<%= driver.num %>" placeholder="Number" />
+            <input type="text" name="code" id="code" value="<%= driver.code %>" placeholder="Code" />
+            <input type="text" name="forename" id="name" value="<%= driver.forename %>" placeholder="Name" />
+            <input type="text" name="surname" id="lname" value="<%= driver.surname %>" placeholder="Last name" />
+        </div>
+        <div class="col-12">
+            <br />
+            <label for="dob">Date of birth: </label>
+            <input type="date" name="dob" id="dob" value="<%= driver.dob %>"/>
+            <label for="url">Biography URL: </label>
+            <input type="url" name="url" id="url" value="<%= driver.url %>"/>
+        </div>
+        <div class="col-12">
+            <br />
+            <label for="nation">Nationality: </label>
+            <select name="nationality" id="nation">
+                <% countries.forEach((country)=> { %>
+                    <option value="<%= country.code %>" <%= (country.code === driver.nationality) ? 'selected' : '' %>>
+                        <%= country.label %>
+                    </option>
+                    <% }) %>
+            </select>
+            <label for="team">Team: </label>
+            <select name="team" id="team">
+                <% teams.forEach((team)=> { %>
+                    <option value="<%= team.code %>">
+                        <%= team.label %>
+                    </option>
+                    <% }) %>
+            </select>
+        </div>
+        <div class="col-12">
+            <br />
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </div>
+</div>

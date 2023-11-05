@@ -1,0 +1,100 @@
+<%- include("partials/header"); -%>
+
+
+    <div class="container">
+        <img src="../images/StarLion.png" alt="lion brewery" />
+        <h1>Welcome to my F1 DB</h1>
+        <form action="/driver" method="post">
+            <h2>Add a new driver</h2>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" name="num" id="num" placeholder="Number" required/>
+                    <input type="text" name="code" id="code" placeholder="Code" required/>
+                    <input type="text" name="forename" id="name" placeholder="Name" required/>
+                    <input type="text" name="surname" id="lname" placeholder="Last name" required/>
+                </div>
+                <div class="col-12">
+                    <br />
+                    <label for="dob">Date of birth: </label>
+                    <input type="date" name="dob" id="dob" required/>
+                    <label for="url">Biography URL: </label>
+                    <input type="url" name="url" id="url" required/>
+                </div>
+                <div class="col-12">
+                    <br />
+                    <label for="nation">Nationality: </label>
+                    <select name="nationality" id="nation">
+                        <% countries.forEach((country)=> { %>
+                            <option value="<%= country.code %>">
+                                <%= country.label %>
+                            </option>
+                            <% }) %>
+                    </select>
+                    <label for="team">Team: </label>
+                    <select name="team" id="team">
+                        <% teams.forEach((team)=> { %>
+                            <option value="<%= team.code %>">
+                                <%= team.label %>
+                            </option>
+                            <% }) %>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <br />
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+            <br/>
+            <h2>Drivers Information</h2>
+    </div>
+    </form>
+    <% drivers.forEach((driver, index)=> { %>
+        <br/>
+        <form method="post">
+            <input type="hidden" name="id" value="<%= driver.id %>">
+            <input type="hidden" name="index" value="<%= index %>">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" name="num" id="num" value="<%= driver.num %>" placeholder="Number" required/>
+                        <input type="text" name="code" id="code" value="<%= driver.code %>" placeholder="Code" required/>
+                        <input type="text" name="forename" id="name" value="<%= driver.forename %>" placeholder="Name" required/>
+                        <input type="text" name="surname" id="lname" value="<%= driver.surname %>" placeholder="Last name" required/>
+                    </div>
+                    <div class="col-12">
+                        <br />
+                        <label for="dob">Date of birth: </label>
+                        <input type="date" name="dob" id="dob" value="<%= driver.dob.toISOString().substring(0, 10) %>" required/>
+                        <label for="url">Biography URL: </label>
+                        <input type="url" name="url" id="url" value="<%= driver.url %>" required/>
+                    </div>
+                    <div class="col-12">
+                        <br />
+                        <label for="nation">Nationality: </label>
+                        <select name="nationality" id="nation">
+                            <% countries.forEach((country)=> { %>
+                                <option value="<%= country.code %>" <%= (country.code === driver.nationality) ? 'selected' : '' %>>
+                                    <%= country.label %>
+                                </option>
+                                <% }) %>
+                        </select>
+                        <label for="team">Team: </label>
+                        <select name="team" id="team">
+                            <% teams.forEach((team)=> { %>
+                                <option value="<%= team.code %>" <%= (team.code === driver.team.code) ? 'selected' : '' %>>
+                                    <%= team.label %>
+                                </option>
+                                <% }) %>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <br />
+                        <button type="submit" class="btn btn-secondary" formaction="/editDriver">Edit</button>
+                        <button type="submit" class="btn btn-danger" formaction="/deleteDriver">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <% }) %>
+
+<%-include("partials/footer"); -%>
